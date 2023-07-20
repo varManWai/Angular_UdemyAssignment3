@@ -6,5 +6,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'udemy-assignment-3';
+  secretPasswords = ['tuna','salmon'];
+  secretPassword = "";
+  secretPwdToggle = false;
+
+  addNewSecretPwd(){
+    this.secretPasswords.push(this.secretPassword);
+    this.secretPassword = '';
+  }
+
+  isDisplay (){
+    if(this.secretPwdToggle === true){
+      this.secretPwdToggle = false;
+    }else{
+      this.secretPwdToggle = true;
+    }
+  }
+
+  showSecretPwd(){
+    return this.secretPwdToggle === true ? "block" : "none"; 
+  }
 }
