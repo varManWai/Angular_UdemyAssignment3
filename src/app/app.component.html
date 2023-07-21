@@ -6,6 +6,6 @@
   <hr>
 
   <button (click)="isDisplay()">Display Details</button>
-  <p [ngStyle]="{display: showSecretPwd()}" *ngFor="let secretPwd of secretPasswords">Secret Password: {{secretPwd}}</p>
+  <p [ngStyle]="{display: showSecretPwd()}" *ngFor="let secretPwd of secretPasswords;let i = index">{{i+1}}. Secret Password: {{secretPwd}}</p>
 
 </div>
